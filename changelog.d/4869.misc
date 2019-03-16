@@ -1,0 +1,1 @@
+Fix yaml library warnings by explicitly specifying a Loader type.
