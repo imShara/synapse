@@ -38,7 +38,7 @@ class RoomDirectoryConfigTestCase(unittest.TestCase):
               action: "allow"
 
         room_list_publication_rules: []
-        """)
+        """, Loader=yaml.FullLoader)
 
         rd_config = RoomDirectoryConfig()
         rd_config.read_config(config)
@@ -92,7 +92,7 @@ class RoomDirectoryConfigTestCase(unittest.TestCase):
               action: "allow"
             - room_id: "!test-deny"
               action: "deny"
-        """)
+        """, Loader=yaml.FullLoader)
 
         rd_config = RoomDirectoryConfig()
         rd_config.read_config(config)
